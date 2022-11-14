@@ -16,18 +16,10 @@ public:
 		//std::cout << "Вызван консткуртор перемещения в Stack" << std::endl;
 		m_data = std::move(other.m_data);
 	}
-	/*
 	Stack(const std::initializer_list<T>& list) {
 		m_data.resize(list.size());
-		m_data = list;// пропадает первый элемент у листа
-
-		//size_t count = 0;
-		//for (auto it = list.begin(); it < list.end(); ++it) {
-		//	m_data[count] = *it;
-		//	count++;
-		//}
+		m_data = list;
 	}
-	*/
 
 	Stack& operator=(const Stack<T>& other) {
 		if (this != &other)
