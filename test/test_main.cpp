@@ -18,6 +18,7 @@ int main(int argc, char** argv)
 	::testing::InitGoogleTest(&argc, argv);
 	return RUN_ALL_TESTS();
 
+	//test for git push
 
 	//Stack<int> s({ 1,3,4,5,6 });
 	//std::cout << s << std::endl;
