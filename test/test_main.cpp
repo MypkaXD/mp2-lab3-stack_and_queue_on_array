@@ -7,21 +7,27 @@
 #include "Queue.h"
 #include "Vector.h"
 
+#include <gtest.h>
+#include "Stack.h"
+
 
 int main(int argc, char** argv)
 {
 	setlocale(LC_ALL, "rus");
 
-	//::testing::InitGoogleTest(&argc, argv);
-	//return RUN_ALL_TESTS();
+	::testing::InitGoogleTest(&argc, argv);
+	return RUN_ALL_TESTS();
 
 
-	Stack<int> s({ 1,3,4,5,6 });
-	std::cout << s << std::endl;
+	//Stack<int> s({ 1,3,4,5,6 });
+	//std::cout << s << std::endl;
+	//
+	//Queue<int> q({ 1,2,4,5,21 });
+	//std::cout << q << std::endl;
+	//
+	//Vector<int> v({ 1,2,3,4,5 });
+	//std::cout << v << std::endl;
 
-	Vector<int> v({ 1,2,3,4,5 });
-	std::cout << v << std::endl;
-	
 	//Stack<int> s;
 	//for (int count = 0; count < 10; count++) {
 	//	s.push(count);
@@ -38,7 +44,7 @@ int main(int argc, char** argv)
 	//if (q.empty())
 	//	std::cout << "YES\n";
 	//else std::cout << "NO\n";
-	
+
 	//Vector<int> v1(3);
 	//for (int count = 0; count < v1.size(); count++) {
 	//	v1.push_back(count);
@@ -71,7 +77,7 @@ int main(int argc, char** argv)
 	//Vector<int> v2 = std::move(v1);
 	//std::cout << &v2 << std::endl;
 	//std::cout << *v2 << std::endl;
-	
+
 	//Vector<int> v1(3);
 	//for (int count = 0; count < 3; count++) {
 	//	v1.push_back(count);

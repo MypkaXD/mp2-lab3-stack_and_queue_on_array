@@ -5,14 +5,17 @@ TEST(Queue, can_create_queue) {
 	ASSERT_NO_THROW(Queue<int> q);
 }
 
+TEST(Queue, can_create_queue_with_initializer_list) {
+	ASSERT_NO_THROW(Queue<int> q({ 1,2,3,4,5 }));
+}
+
 TEST(Queue, can_create_copied_queue) {
 	Queue<int> q1;
 
 	ASSERT_NO_THROW(Queue<int> q2(q1));
 }
 
-TEST(Queue, can_assign_queue_to_itself)
-{
+TEST(Queue, can_assign_queue_to_itself) {
 	Queue<int> q;
 
 	ASSERT_NO_THROW(q = q);

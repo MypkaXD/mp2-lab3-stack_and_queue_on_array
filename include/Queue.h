@@ -8,11 +8,12 @@ class Queue : private Vector<Vector<T>> {
 private:
 	Vector<T> m_data;
 public:
-	Queue(){}
+	Queue() {}
 	Queue(const Queue<T>& other) {
 		m_data = other.m_data;
 	}
 	Queue(const std::initializer_list<T>& list) {
+		m_data.resize(list.size());
 		m_data = list;
 	}
 	Queue(Queue<T>&& other) noexcept {
@@ -32,7 +33,7 @@ public:
 			m_data = std::move(other.m_data);
 		return *this;
 	}
-	
+
 	T& back() {
 		if (size() == 0)
 			throw "ERROR: queue is empty";
