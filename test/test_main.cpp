@@ -97,7 +97,19 @@ int main(int argc, char** argv)
 	//Stack<int> s3;
 	//s3 = std::move(s2);
 	//std::cout << s3 << std::endl;
-
+	//
+	//Queue<int> q1;
+	//for (int count = 0; count < 3; count++) {
+	//	q1.push(count);
+	//}
+	//std::cout << q1 << std::endl;
+	//
+	//Queue<int> q2 = std::move(q1);
+	//std::cout << q2 << std::endl;
+	//
+	//Queue<int> q3;
+	//q3 = q2;
+	//std::cout << q3 << std::endl;
 
 	//Vector<int> v(10);
 	//for (int count = 0; count < 10;count++)
