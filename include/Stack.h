@@ -4,7 +4,7 @@
 #define STACK_H
 
 template <class T>
-class Stack : private Vector<Vector<T>> {
+class Stack{
 private:
 	Vector<T> m_data;
 public:
@@ -20,6 +20,12 @@ public:
 		m_data.resize(list.size());
 		m_data = list;
 	}
+
+	//template <class U>
+	//Stack(const Stack<U>& v) {
+	//	if (std::is_same<std::string, U>::value)
+	//		std::to_string(v[i]);
+	//}
 
 	Stack& operator=(const Stack<T>& other) {
 		if (this != &other)

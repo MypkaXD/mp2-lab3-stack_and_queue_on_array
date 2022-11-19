@@ -8,12 +8,12 @@
 
 template <class T>
 class Vector {
-private:
+protected:
 	size_t m_size = 0;
 	size_t m_capacity = 0;
 	T* m_data = nullptr;
 public:
-	Vector(){}
+	Vector() {}
 	Vector(size_t size){
 		if (size <= 0)
 			throw ("ERROR: size should be greater than zero");
@@ -23,13 +23,15 @@ public:
 	}
 	Vector(const Vector& other) {
 		//if (sizeof(m_data[0]) != sizeof(other.m_data[0]))
-		//	throw ("ERROR: diffrent type");
+		//if (getType() != other.getType())
+		//	throw ("ERROR: different type");
 		resize(other.m_size);
 		m_data = new T[m_capacity];
 
 		for (size_t count = 0; count < m_size; count++)
 			m_data[count] = other.m_data[count];
 	}
+
 	Vector(const std::initializer_list<T>& list) {
 		resize(list.size());
 		m_data = new T[m_capacity];
@@ -121,6 +123,7 @@ public:
 		if (m_capacity > newSize) m_size = newSize;
 		else {
 			m_capacity = (newSize + 1) * 2;
+			//std::cout << m_capacity << "SADA\n";
 			T* temp = new T[m_capacity];
 			for (size_t count = 0; count < m_size; count++)
 				temp[count] = m_data[count];

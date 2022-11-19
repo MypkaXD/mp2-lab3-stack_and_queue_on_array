@@ -14,6 +14,43 @@
 int main(int argc, char** argv)
 {
 	setlocale(LC_ALL, "rus");
+	
+
+	//Queue<int> q;
+	//for (int count = 0; count < 4; count++) {
+	//	q.push(count);
+	//	std::cout << q << std::endl;
+	//	std::cout << "START IS = " << q.start() << "\t END IS = " << q.end() << std::endl;
+	//	std::cout << "SIZE IS = " << q.size() << std::endl;
+	//}
+	//std::cout << q << std::endl;
+	//q.pop();
+	//std::cout << q << std::endl;
+	//std::cout << "START IS = " << q.start() << "\t END IS = " << q.end() << std::endl;
+	//q.pop();
+	//std::cout << q << std::endl;
+	//std::cout << "START IS = " << q.start() << "\t END IS = " << q.end() << std::endl;
+	//q.pop();
+	//std::cout << q << std::endl;
+	//std::cout << "START IS = " << q.start() << "\t END IS = " << q.end() << std::endl;
+	//q.push(10);
+	//std::cout << q << std::endl;
+	//std::cout << "START IS = " << q.start() << "\t END IS = " << q.end() << std::endl;
+	//
+	//Stack<int> s;
+	//Stack<std::string> s2(s);
+
+	//int var;
+	//std::cout << typeid(var).name() << std::endl;
+	//
+	//Vector<int> v1({ 123,2131,1312 });
+	//std::cout << v1 << std::endl;
+	//Vector<int> v2(v1);
+	//std::cout << v2 << std::endl;
+	//Vector<double> v3;
+	//std::cout << v3 << std::endl;
+	//Vector<int> v(10);
+	//std::cout << v << std::endl;
 
 	::testing::InitGoogleTest(&argc, argv);
 	return RUN_ALL_TESTS();
